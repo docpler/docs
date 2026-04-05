@@ -1,14 +1,10 @@
 {
-  "title": "docpler",
+  "title": "Docpler",
   "pages": [
     "index",
-    "---설치---",
     "installation",
-    "---사용법---",
     "usage",
-    "---플러그인---",
     "plugins",
-    "---기타---",
     "supported-formats",
     "license"
   ]
