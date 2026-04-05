@@ -1,0 +1,14 @@
+{
+  "sidebar.docsSidebar.category.Installation": {
+    "message": "설치",
+    "description": "The label for category Installation in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Usage": {
+    "message": "사용법",
+    "description": "The label for category Usage in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Plugins": {
+    "message": "플러그인",
+    "description": "The label for category Plugins in sidebar docsSidebar"
+  }
+}
