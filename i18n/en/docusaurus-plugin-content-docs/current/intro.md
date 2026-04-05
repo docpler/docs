@@ -59,6 +59,31 @@ print(result.text_content)
 ```
 
   </TabItem>
+  <TabItem value="claude" label="Claude Code">
+
+```
+/plugin marketplace add docpler/docpler-claude-plugin
+/plugin install docpler@docpler
+```
+
+```
+> Please read and summarize report.hwp
+```
+
+  </TabItem>
+  <TabItem value="codex" label="Codex">
+
+Install CLI, then use in Codex:
+
+```bash
+brew install docpler/tap/docpler
+```
+
+```
+> Read and summarize report.hwp using docpler convert
+```
+
+  </TabItem>
 </Tabs>
 
 ## Demo
