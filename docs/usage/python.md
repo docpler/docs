@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Python
 
-## Basic Conversion
+## 기본 변환
 
 ```python
 from docpler.hwp import convert
@@ -13,7 +13,7 @@ markdown = convert("document.hwp")
 print(markdown)
 ```
 
-## Save to File
+## 파일로 저장
 
 ```python
 from docpler.hwp import convert
@@ -23,16 +23,16 @@ with open("output.md", "w") as f:
     f.write(markdown)
 ```
 
-## Supported Content
+## 지원 콘텐츠
 
-The converter extracts the following from HWP 5.0 files:
+HWP 5.0 파일에서 다음 콘텐츠를 추출합니다:
 
-- **Paragraphs** — plain text with formatting stripped
-- **Tables** — rendered as Markdown pipe tables
-- **Equations** — HWP EQN script output as `$$...$$` blocks
-- **Text boxes** — extracted as paragraphs
+- **문단** — 서식이 제거된 텍스트
+- **표** — Markdown 파이프 테이블로 렌더링
+- **수식** — `$$...$$` 블록으로 출력 (HWP EQN 스크립트)
+- **글상자** — 문단으로 추출
 
-## Error Handling
+## 에러 처리
 
 ```python
 from docpler.hwp import convert
@@ -40,9 +40,9 @@ from docpler.hwp import convert
 try:
     markdown = convert("document.hwp")
 except RuntimeError as e:
-    print(f"Conversion failed: {e}")
+    print(f"변환 실패: {e}")
 ```
 
-Common errors:
-- `Invalid HWP signature` — not a valid HWP file
-- `Password-protected HWP files are not supported` — encrypted files cannot be parsed
+주요 에러:
+- `Invalid HWP signature` — 유효하지 않은 HWP 파일
+- `Password-protected HWP files are not supported` — 암호화된 파일은 지원하지 않음

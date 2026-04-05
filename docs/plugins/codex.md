@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # OpenAI Codex
 
-The docpler CLI can be used with [OpenAI Codex](https://openai.com/codex) to read HWP files.
+docpler CLI를 설치하면 [OpenAI Codex](https://openai.com/codex)에서 HWP 파일을 읽을 수 있습니다.
 
-## Install CLI
+## CLI 설치
 
-First, install the docpler CLI:
+먼저 docpler CLI를 설치하세요:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -39,12 +39,12 @@ chmod +x /usr/local/bin/docpler
   </TabItem>
 </Tabs>
 
-## Usage
+## 사용법
 
-Once installed, ask Codex to read HWP files:
+CLI 설치 후 Codex에게 HWP 파일을 읽어달라고 요청하세요:
 
 ```
-> Read and summarize report.hwp using docpler convert
+> docpler convert 로 report.hwp 를 읽고 요약해줘
 ```
 
-Codex will use `docpler convert` to parse the file and return the Markdown content.
+Codex가 `docpler convert`를 사용해서 파일을 변환하고 Markdown 내용을 반환합니다.

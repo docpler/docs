@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # CLI
 
-docpler CLI는 독립 실행형 네이티브 바이너리입니다. Python이나 별도 런타임이 필요 없습니다.
+The docpler CLI is a standalone native binary — no Python or runtime required.
 
 ## macOS (Homebrew)
 
@@ -19,25 +19,25 @@ scoop bucket add docpler https://github.com/docpler/scoop-bucket
 scoop install docpler
 ```
 
-## 직접 다운로드
+## Manual Download
 
-[GitHub Releases](https://github.com/docpler/docpler-cli/releases)에서 플랫폼에 맞는 바이너리를 다운로드하세요.
+Download the binary for your platform from [GitHub Releases](https://github.com/docpler/docpler-cli/releases).
 
-| 플랫폼 | 바이너리 |
-|--------|---------|
+| Platform | Binary |
+|----------|--------|
 | macOS ARM | `docpler-aarch64-apple-darwin` |
 | macOS Intel | `docpler-x86_64-apple-darwin` |
 | Linux x86_64 | `docpler-x86_64-unknown-linux-gnu` |
 | Windows x86_64 | `docpler-x86_64-pc-windows-msvc.exe` |
 
-### 예시 (macOS ARM)
+### Example (macOS ARM)
 
 ```bash
 curl -fsSL https://github.com/docpler/docpler-cli/releases/latest/download/docpler-aarch64-apple-darwin -o /usr/local/bin/docpler
 chmod +x /usr/local/bin/docpler
 ```
 
-## 설치 확인
+## Verify Installation
 
 ```bash
 docpler --version

@@ -2,19 +2,19 @@
 sidebar_position: 3
 ---
 
-# MarkItDown Plugin
+# MarkItDown 플러그인
 
-[MarkItDown](https://github.com/microsoft/markitdown) is a document-to-Markdown converter by Microsoft. The `markitdown-hwp` package adds HWP support to MarkItDown.
+[MarkItDown](https://github.com/microsoft/markitdown)은 Microsoft의 문서-Markdown 변환 도구입니다. `markitdown-hwp` 패키지를 설치하면 MarkItDown에서 HWP 파일을 지원합니다.
 
-## Install
+## 설치
 
 ```bash
 pip install markitdown-hwp
 ```
 
-This automatically installs `markitdown` and `docpler` as dependencies.
+`markitdown`과 `docpler`가 자동으로 설치됩니다.
 
-## Verify Installation
+## 설치 확인
 
 ```python
 from markitdown import MarkItDown
@@ -25,5 +25,5 @@ print(result.text_content)
 ```
 
 :::note
-`enable_plugins=True` is required for MarkItDown to load the HWP converter plugin.
+MarkItDown이 HWP 플러그인을 로드하려면 `enable_plugins=True`가 필요합니다.
 :::

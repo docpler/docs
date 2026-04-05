@@ -4,26 +4,26 @@ sidebar_position: 1
 
 # Python
 
-## Requirements
+## 요구사항
 
 - Python 3.9+
 
-## Install from PyPI
+## PyPI에서 설치
 
 ```bash
 pip install docpler
 ```
 
-## Supported Platforms
+## 지원 플랫폼
 
-| Platform | Architecture |
-|----------|-------------|
+| 플랫폼 | 아키텍처 |
+|--------|---------|
 | macOS | ARM (Apple Silicon) |
 | macOS | x86_64 (Intel) |
 | Linux | x86_64 |
 | Windows | x86_64 |
 
-## Verify Installation
+## 설치 확인
 
 ```python
 from docpler.hwp import convert

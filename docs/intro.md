@@ -3,20 +3,20 @@ slug: /
 sidebar_position: 1
 ---
 
-# Introduction
+# 소개
 
-**docpler** is a high-performance document conversion tool that transforms HWP files into clean Markdown.
+**docpler**는 HWP 파일을 깨끗한 Markdown으로 변환하는 고성능 문서 변환 도구입니다.
 
-[HWP](https://en.wikipedia.org/wiki/Hangul_(word_processor)) is the native document format of **Hangul Word Processor** by [Hancom](https://www.hancom.com/), the most widely used word processor in South Korea. HWP files are commonly found in Korean government agencies, courts, public institutions, legal firms, and academic settings.
+[HWP](https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80_(%EC%9B%8C%EB%93%9C_%ED%94%84%EB%A1%9C%EC%84%B8%EC%84%9C))는 [한글과컴퓨터](https://www.hancom.com/)의 한글 워드프로세서 고유 문서 형식으로, 한국의 정부 기관, 법원, 공공기관, 법률 사무소, 학계에서 널리 사용됩니다.
 
-## Features
+## 특징
 
-- **Fast** — Powered by a native Rust engine, not a slow wrapper or emulator
-- **Accurate** — Parses paragraphs, tables, equations, and text boxes from HWP 5.0 files
-- **Flexible** — Available as a Python library, CLI tool, MarkItDown plugin, and AI coding agent plugins
-- **Cross-platform** — Supports macOS (ARM & Intel), Linux, and Windows
+- **빠름** — 네이티브 Rust 엔진 기반, 느린 래퍼나 에뮬레이터가 아님
+- **정확함** — HWP 5.0 파일에서 문단, 표, 수식, 글상자를 정확하게 파싱
+- **유연함** — Python 라이브러리, CLI 도구, MarkItDown 플러그인, AI 코딩 에이전트 플러그인으로 제공
+- **크로스 플랫폼** — macOS (ARM & Intel), Linux, Windows 지원
 
-## Quick Start
+## 빠른 시작
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -61,6 +61,6 @@ print(result.text_content)
   </TabItem>
 </Tabs>
 
-## Demo
+## 데모
 
-Try it online at [Hugging Face Spaces](https://huggingface.co/spaces/rightstack/docpler) — no installation required.
+설치 없이 [Hugging Face Spaces](https://huggingface.co/spaces/rightstack/docpler)에서 바로 사용해보세요.

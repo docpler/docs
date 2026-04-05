@@ -2,37 +2,37 @@
 sidebar_position: 5
 ---
 
-# Supported Formats
+# 지원 포맷
 
-## Current
+## 현재
 
-| Format | Version | Read | Output | Notes |
-|--------|---------|------|--------|-------|
-| HWP | 5.0 | ✅ | Markdown | Tables, equations, text boxes supported |
+| 포맷 | 버전 | 읽기 | 출력 | 비고 |
+|------|------|------|------|------|
+| HWP | 5.0 | ✅ | Markdown | 표, 수식, 글상자 지원 |
 
-## Content Support (HWP 5.0)
+## 콘텐츠 지원 (HWP 5.0)
 
-| Content Type | Supported | Output |
-|-------------|-----------|--------|
-| Paragraphs | ✅ | Plain text |
-| Tables | ✅ | Markdown pipe tables |
-| Equations | ✅ | `$$...$$` blocks (HWP EQN script) |
-| Text boxes | ✅ | Extracted as paragraphs |
-| Images | ❌ | Not yet supported |
-| Headers/Footers | ❌ | Not yet supported |
-| Footnotes | ❌ | Not yet supported |
+| 콘텐츠 유형 | 지원 | 출력 |
+|------------|------|------|
+| 문단 | ✅ | 텍스트 |
+| 표 | ✅ | Markdown 파이프 테이블 |
+| 수식 | ✅ | `$$...$$` 블록 (HWP EQN 스크립트) |
+| 글상자 | ✅ | 문단으로 추출 |
+| 이미지 | ❌ | 미지원 |
+| 머리글/바닥글 | ❌ | 미지원 |
+| 각주 | ❌ | 미지원 |
 
-## Limitations
+## 제한사항
 
-- **Password-protected files** are not supported
-- **HWP older than 5.0** (e.g., HWP 3.0, HWP 97) are not supported
-- **HWPX** (XML-based format) is not yet supported
-- **Equation output** uses HWP EQN script format, not LaTeX (LaTeX conversion planned)
+- **암호화된 파일**은 지원하지 않습니다
+- **HWP 5.0 이전 버전** (HWP 3.0, HWP 97 등)은 지원하지 않습니다
+- **HWPX** (XML 기반 포맷)는 아직 지원하지 않습니다
+- **수식 출력**은 HWP EQN 스크립트 형식이며, LaTeX 변환은 예정입니다
 
-## Planned
+## 예정
 
-| Format | Status |
-|--------|--------|
-| HWPX (XML) | Planned |
-| HWP EQN → LaTeX | Planned |
-| Image extraction | Planned |
+| 포맷 | 상태 |
+|------|------|
+| HWPX (XML) | 예정 |
+| HWP EQN → LaTeX | 예정 |
+| 이미지 추출 | 예정 |

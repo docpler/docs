@@ -19,11 +19,11 @@ const config = {
   onBrokenLinks: 'throw',
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'ko'],
+    defaultLocale: 'ko',
+    locales: ['ko', 'en'],
     localeConfigs: {
-      en: { label: 'English' },
       ko: { label: '한국어' },
+      en: { label: 'English' },
     },
   },
 

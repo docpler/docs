@@ -2,35 +2,35 @@
 sidebar_position: 6
 ---
 
-# License & Notices
+# 라이선스 및 고지
 
-## License
+## 라이선스
 
-docpler is released under the **[Business Source License 1.1 (BSL 1.1)](https://mariadb.com/bsl11/)**.
+docpler는 **[Business Source License 1.1 (BSL 1.1)](https://mariadb.com/bsl11/)**로 제공됩니다.
 
-- **Free to use** for any purpose, including production use
-- **Cannot** be provided to others as a managed service
-- Converts to **Apache License 2.0** on **2031-04-05**
-- **Rust core engine** — distributed as compiled binary; source code is private
+- 프로덕션 사용을 포함하여 **자유롭게 사용** 가능
+- 타인에게 **매니지드 서비스로 제공 불가**
+- **2031년 4월 5일**에 **Apache License 2.0**으로 자동 전환
+- **Rust 코어 엔진** — 컴파일된 바이너리로 배포, 소스 코드 비공개
 
-### What you CAN do
+### 할 수 있는 것
 
-- Use docpler in your applications and workflows
-- Use it for commercial purposes
-- Modify and redistribute the Python wrapper code
-- Build products that use docpler internally
+- 애플리케이션과 워크플로우에서 docpler 사용
+- 상업적 목적으로 사용
+- Python 래퍼 코드를 수정하고 재배포
+- docpler를 내부적으로 사용하는 제품 개발
 
-### What you CANNOT do
+### 할 수 없는 것
 
-- Offer docpler as a hosted/managed service to third parties
-- Circumvent license keys or feature restrictions
+- docpler를 호스팅/매니지드 서비스로 제3자에게 제공
+- 라이선스 키 또는 기능 제한 우회
 
-### License Conversion
+### 라이선스 전환
 
-On April 5, 2031, docpler v1.0.0 will automatically convert to the Apache License 2.0, making it fully open source. Each subsequent version will have its own 5-year conversion timeline.
+2031년 4월 5일에 docpler v1.0.0은 Apache License 2.0으로 자동 전환되어 완전한 오픈소스가 됩니다. 이후 각 버전은 자체적인 5년 전환 일정을 갖습니다.
 
-## HWP Format Notice
+## HWP 포맷 관련 고지
 
-This product was developed with reference to the HWP document file (.hwp) specification published by [Hancom](https://www.hancom.com/etc/hwpDownload.do).
+본 제품은 한글과컴퓨터의 한글 문서 파일(.hwp) 공개 문서를 참고하여 개발하였습니다.
 
-The copyright of the HWP file format specification belongs to Hancom, Inc. (한글과컴퓨터). The full specification document is available at the [Hancom official page](https://www.hancom.com/etc/hwpDownload.do).
+HWP 파일 포맷 공개 문서의 저작권은 (주)한글과컴퓨터에 있으며, 공개 문서의 전문은 [한글과컴퓨터 공식 페이지](https://www.hancom.com/etc/hwpDownload.do)에서 확인할 수 있습니다.
