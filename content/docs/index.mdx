@@ -4,6 +4,8 @@ description: HWP 문서를 Markdown으로 변환하는 고성능 도구
 icon: BookOpen
 ---
 
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
 # 소개
 
 **Docpler**는 HWP 파일을 Markdown으로 변환하는 고성능 문서 변환 도구입니다.
@@ -19,8 +21,8 @@ icon: BookOpen
 
 ## 빠른 시작
 
-<IconTabs>
-  <IconTabPanel>
+<Tabs items={['Python', 'CLI', 'MarkItDown', 'Claude Code', 'Codex']}>
+  <Tab value="Python">
 ```bash
 pip install docpler
 ```
@@ -29,8 +31,8 @@ pip install docpler
 from docpler.hwp import convert
 print(convert("document.hwp"))
 ```
-  </IconTabPanel>
-  <IconTabPanel>
+  </Tab>
+  <Tab value="CLI">
 ```bash
 brew install docpler/tap/docpler
 ```
@@ -38,8 +40,8 @@ brew install docpler/tap/docpler
 ```bash
 docpler convert document.hwp
 ```
-  </IconTabPanel>
-  <IconTabPanel>
+  </Tab>
+  <Tab value="MarkItDown">
 ```bash
 pip install markitdown-hwp
 ```
@@ -50,8 +52,8 @@ md = MarkItDown(enable_plugins=True)
 result = md.convert("document.hwp")
 print(result.text_content)
 ```
-  </IconTabPanel>
-  <IconTabPanel>
+  </Tab>
+  <Tab value="Claude Code">
 ```
 /plugin marketplace add docpler/docpler-claude-plugin
 /plugin install docpler@docpler
@@ -60,8 +62,8 @@ print(result.text_content)
 ```
 > report.hwp 파일을 읽고 요약해줘
 ```
-  </IconTabPanel>
-  <IconTabPanel>
+  </Tab>
+  <Tab value="Codex">
 CLI 설치 후 Codex에서 바로 사용:
 
 ```bash
@@ -71,8 +73,8 @@ brew install docpler/tap/docpler
 ```
 > docpler convert 로 report.hwp 를 읽고 요약해줘
 ```
-  </IconTabPanel>
-</IconTabs>
+  </Tab>
+</Tabs>
 
 ## 데모
 
