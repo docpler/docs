@@ -8,16 +8,10 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 
 docpler CLI는 독립 실행형 네이티브 바이너리입니다. Python이나 별도 런타임이 필요 없습니다.
 
-<Tabs items={['macOS', 'Windows', 'Linux']}>
+<Tabs items={['macOS', 'Linux']}>
   <Tab value="macOS">
 ```bash
 brew install docpler/tap/docpler
-```
-  </Tab>
-  <Tab value="Windows">
-```powershell
-scoop bucket add docpler https://github.com/docpler/scoop-bucket
-scoop install docpler
 ```
   </Tab>
   <Tab value="Linux">
@@ -28,6 +22,11 @@ chmod +x /usr/local/bin/docpler
   </Tab>
 </Tabs>
 
+> **Windows 사용자:** CLI 바이너리 대신 [Python 패키지](/docs/installation/python)로 설치해 주세요.
+> ```bash
+> pip install docpler
+> ```
+
 ## 직접 다운로드
 
 [GitHub Releases](https://github.com/docpler/docpler-cli/releases)에서 플랫폼에 맞는 바이너리를 다운로드할 수 있습니다.
@@ -37,7 +36,6 @@ chmod +x /usr/local/bin/docpler
 | macOS ARM | `docpler-aarch64-apple-darwin` |
 | macOS Intel | `docpler-x86_64-apple-darwin` |
 | Linux x86_64 | `docpler-x86_64-unknown-linux-gnu` |
-| Windows x86_64 | `docpler-x86_64-pc-windows-msvc.exe` |
 
 ## 설치 확인
 
