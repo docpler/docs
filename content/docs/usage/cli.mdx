@@ -4,16 +4,26 @@ description: CLI 사용법
 icon: Terminal
 ---
 
-## 표준 출력으로 변환
+import { Callout } from 'fumadocs-ui/components/callout';
+
+## 기본 변환
 
 ```bash
+# 표준 출력으로 변환
 docpler convert document.hwp
+
+# 파일로 저장
+docpler convert document.hwp -o output.md
 ```
 
-## 파일로 저장
+## 터미널 미리보기
 
 ```bash
-docpler convert document.hwp -o output.md
+# HWP 파일을 터미널에서 예쁘게 보기
+docpler cat document.hwp
+
+# Markdown 파일도 가능
+docpler cat output.md
 ```
 
 ## 파이프로 연결
@@ -26,9 +36,136 @@ docpler convert report.hwp | grep "예산"
 docpler convert report.hwp | wc -w
 ```
 
+## Pro 기능
+
+<Callout>
+Pro 기능을 사용하려면 라이선스 키가 필요합니다.
+</Callout>
+
+### 라이선스 설정
+
+```bash
+# 환경 변수로 설정
+export DOCPLER_LICENSE_KEY="<your-jwt>"
+
+# 또는 로그인 (저장됨)
+docpler auth login <your-jwt>
+
+# 상태 확인
+docpler status
+```
+
+### 정밀 Markdown
+
+라이선스가 설정되어 있으면 `convert` 시 자동으로 정밀 Markdown이 적용됩니다.
+
+```bash
+# 라이선스 있으면 자동으로 precise-md (서식 보존, LaTeX 수식)
+docpler convert document.hwp -o output.md
+```
+
+### 이미지 추출
+
+파일 출력(`-o`) 시 이미지가 자동으로 `assets/` 디렉토리에 추출됩니다.
+
+```bash
+docpler convert document.hwp -o output.md
+# 결과:
+# output.md           ← ![캡션](assets/image001.png)
+# assets/image001.png ← 실제 이미지 파일
+```
+
+### Typst 출력
+
+```bash
+docpler convert document.hwp --format typst -o output.typ
+```
+
+```typ
+= 제목
+
+본문 텍스트
+
+#table(
+  columns: 3,
+  table.header[이름], table.header[나이], table.header[직업],
+  [홍길동], [30], [개발자],
+)
+
+$ x = frac(-b plus.minus sqrt(b^2 - 4a c), 2a) $
+```
+
+### LaTeX 출력
+
+```bash
+docpler convert document.hwp --format latex -o output.tex
+```
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section{제목}
+
+본문 텍스트
+
+\begin{tabular}{l l l}
+\toprule
+이름 & 나이 & 직업 \\
+\midrule
+홍길동 & 30 & 개발자 \\
+\bottomrule
+\end{tabular}
+
+\end{document}
+```
+
+### ZIP 번들
+
+```bash
+docpler convert document.hwp --format zip
+# 결과: document.zip
+#   ├── index.md
+#   ├── manifest.json
+#   └── assets/
+#       └── image001.png
+```
+
+### Markdown → HWP
+
+```bash
+docpler convert document.md --format hwp -o output.hwp
+```
+
+## 전체 명령어
+
+| 명령 | 설명 |
+|------|------|
+| `docpler convert <file>` | 파일 변환 |
+| `docpler cat <file>` | 터미널에서 미리보기 |
+| `docpler auth login` | 라이선스 등록 |
+| `docpler auth info` | 라이선스 정보 |
+| `docpler auth logout` | 라이선스 제거 |
+| `docpler status` | 현재 상태 |
+
+## 출력 형식 (`--format`)
+
+| 값 | 확장자 | 등급 | 설명 |
+|----|--------|------|------|
+| `md` | `.md` | Free | 기본 Markdown |
+| `precise-md` | `.md` | Pro | 정밀 Markdown |
+| `typst` | `.typ` | Pro | Typst 소스 |
+| `latex` | `.tex` | Pro | LaTeX 소스 |
+| `zip` | `.zip` | Pro | ZIP 번들 (이미지 포함) |
+| `hwp` | `.hwp` | Pro | HWP 문서 생성 |
+
 ## 종료 코드
 
 | 코드 | 의미 |
 |------|------|
 | 0 | 성공 |
-| 1 | 에러 (잘못된 파일, 암호화 등) |
+| 1 | 에러 (잘못된 파일, 암호화, 라이선스 없음 등) |

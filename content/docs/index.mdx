@@ -15,9 +15,23 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 ## 특징
 
 - **빠름** — 네이티브 Rust 엔진 기반
-- **정확함** — HWP 5.0 파일에서 문단, 표, 수식, 글상자를 파싱
+- **정확함** — HWP 5.0 파일에서 문단, 표, 중첩표, 수식, 이미지, 글상자를 파싱
+- **다양한 출력** — Markdown, Typst, LaTeX, ZIP 번들 (Pro)
 - **유연함** — Python, CLI, MarkItDown, Claude Code, Codex 지원
 - **크로스 플랫폼** — macOS (ARM & Intel), Linux, Windows
+
+## Free vs Pro
+
+|  | Free | Pro |
+|--|------|-----|
+| 문단, 표, 수식, 글상자 | ✅ | ✅ |
+| 중첩표 (HTML) | - | ✅ |
+| 이미지 추출 | - | ✅ |
+| 정밀 Markdown (서식, LaTeX 수식) | - | ✅ |
+| Typst / LaTeX 출력 | - | ✅ |
+| ZIP 번들 | - | ✅ |
+| Markdown → HWP 변환 | - | ✅ |
+| Python, CLI, MarkItDown | ✅ | ✅ |
 
 ## 빠른 시작
 

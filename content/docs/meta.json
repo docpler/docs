@@ -2,10 +2,12 @@
   "title": "Docpler",
   "pages": [
     "index",
+    "features",
     "installation",
     "usage",
     "plugins",
     "supported-formats",
+    "pricing",
     "license"
   ]
 }

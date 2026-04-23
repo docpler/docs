@@ -1,0 +1,41 @@
+---
+title: HWP 생성
+description: Markdown 파일을 한컴 뷰어에서 열 수 있는 HWP 문서로 변환합니다.
+icon: FilePlus
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+<Callout>HWP 생성은 Pro 기능입니다.</Callout>
+
+## Markdown → HWP
+
+Markdown 문서를 HWP 5.0 형식으로 변환합니다.
+한컴 뷰어, 한컴오피스에서 정상적으로 열립니다.
+
+```bash
+docpler convert report.md --format hwp -o report.hwp
+```
+
+## 지원하는 Markdown 요소
+
+| 요소 | HWP 변환 |
+|------|----------|
+| 문단 | HWP 문단 |
+| 제목 (`#` ~ `######`) | HWP 문단 |
+| 파이프 테이블 | HWP 표 |
+| HTML 테이블 | HWP 표 (평문 변환) |
+| 수식 (`$$...$$`) | HWP 수식 편집기 |
+
+## 라운드트립
+
+HWP → Markdown → HWP 라운드트립이 가능합니다.
+텍스트, 표, 수식의 내용이 보존됩니다.
+
+```bash
+# HWP → Markdown
+docpler convert original.hwp -o document.md
+
+# 편집 후 다시 HWP로
+docpler convert document.md --format hwp -o rebuilt.hwp
+```

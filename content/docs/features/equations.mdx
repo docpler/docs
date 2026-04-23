@@ -1,0 +1,50 @@
+---
+title: 수식 변환
+description: HWP 수식 편집기(EQN)의 스크립트를 LaTeX, Typst 수식으로 변환합니다.
+icon: Calculator
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+## HWP EQN 스크립트 (Free)
+
+Free에서는 HWP 수식 편집기의 원본 스크립트를 `$$...$$` 블록으로 출력합니다.
+
+```
+$$
+a + b over c
+$$
+```
+
+## LaTeX 변환 (Pro)
+
+<Callout>LaTeX 수식 변환은 Pro 기능입니다.</Callout>
+
+Pro에서는 HWP EQN 스크립트를 LaTeX 문법으로 자동 변환합니다.
+그리스 문자, 분수, 적분, 시그마 등 주요 수식 기호를 지원합니다.
+
+```latex
+$$ \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+```
+
+### 변환 예시
+
+| HWP EQN | LaTeX |
+|---------|-------|
+| `a over b` | `\frac{a}{b}` |
+| `sqrt x` | `\sqrt{x}` |
+| `SUM` | `\sum` |
+| `INT` | `\int` |
+| `ALPHA, BETA` | `\alpha, \beta` |
+| `LEFT (` | `\left(` |
+| `RIGHT )` | `\right)` |
+| `TIMES` | `\times` |
+| `INF` | `\infty` |
+
+## Typst 출력
+
+`--format typst`로 출력하면 LaTeX 변환된 수식이 Typst `$ ... $` 블록에 포함됩니다.
+
+```typ
+$ x = frac(-b plus.minus sqrt(b^2 - 4a c), 2a) $
+```
