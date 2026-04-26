@@ -32,7 +32,7 @@ const tiers = [
       '이메일 지원',
     ],
     cta: '문의하기',
-    href: 'mailto:contact@rightstack.io',
+    href: 'mailto:support@rightstack.net',
     highlight: true,
   },
   {
@@ -47,7 +47,7 @@ const tiers = [
       '전담 기술 지원',
     ],
     cta: '문의하기',
-    href: 'mailto:contact@rightstack.io',
+    href: 'mailto:support@rightstack.net',
     highlight: false,
   },
 ];
